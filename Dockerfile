@@ -8,3 +8,9 @@ ADD login /etc/pam.d/login
 
 ADD nscd.conf  /etc/nscd.conf
 
+COPY ./services /etc/services.d/
+
+ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-amd64-installer /tmp/
+RUN chmod +x /tmp/s6-overlay-amd64-installer && /tmp/s6-overlay-amd64-installer /
+
+ENTRYPOINT ["/init"]
