@@ -16,4 +16,6 @@ COPY ./services /etc/services.d/
 ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-amd64-installer /tmp/
 RUN sudo chmod +x /tmp/s6-overlay-amd64-installer && sudo /tmp/s6-overlay-amd64-installer /
 
-ENTRYPOINT [ "sudo /init" ]
+ADD sudo-init /sudo-init
+
+ENTRYPOINT [ "sudo-init" ]
