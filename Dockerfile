@@ -6,4 +6,5 @@ ADD nsswitch.conf /etc/nsswitch.conf
 
 ADD login /etc/pam.d/login
 
+ADD nscd.conf  /etc/nscd.conf
 
