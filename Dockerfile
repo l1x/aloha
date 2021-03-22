@@ -18,4 +18,4 @@ RUN sudo chmod +x /tmp/s6-overlay-amd64-installer && sudo /tmp/s6-overlay-amd64-
 
 ADD sudo-init /sudo-init
 
-ENTRYPOINT [ "sudo-init" ]
+ENTRYPOINT [ "/sudo-init" ]
