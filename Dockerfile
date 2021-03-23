@@ -14,5 +14,4 @@ COPY ./services /etc/services.d/
 
 ADD sudo-init /sudo-init
 
-USER app
 ENTRYPOINT [ "/sudo-init" ]
