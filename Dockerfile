@@ -1,4 +1,4 @@
-FROM local/aloha-1:2021.03.22
+FROM local/aloha-s6:2021.03.23
 
 USER admin
 
